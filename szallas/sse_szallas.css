@@ -1,0 +1,640 @@
+/**
+ * css/less stylesheet
+ * 
+ * @version 2022.08.29.
+ * @package SSE szállásfoglaló
+ * @author Soós András
+ */
+@font-face {
+  font-family: 'robotobold';
+  src: url('../szallas/fonts/roboto-bold-webfont.eot');
+  src: url('../szallas/fonts/roboto-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../szallas/fonts/roboto-bold-webfont.woff2') format('woff2'), url('../szallas/fonts/roboto-bold-webfont.woff') format('woff'), url('../szallas/fonts/fonts/roboto-bold-webfont.ttf') format('truetype'), url('../szallas/fonts/roboto-bold-webfont.svg#robotobold') format('svg');
+}
+@font-face {
+  font-family: 'robotoregular';
+  src: url('../szallas/fonts/roboto-regular-webfont.eot');
+  src: url('../szallas/fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../szallas/fonts/roboto-regular-webfont.woff2') format('woff2'), url('../szallas/fonts/roboto-regular-webfont.woff') format('woff'), url('../szallas/fonts/roboto-regular-webfont.ttf') format('truetype'), url('../szallas/fonts/roboto-regular-webfont.svg#robotoregular') format('svg');
+}
+html {
+  font-size: 10px;
+}
+body {
+  overflow-y: scroll;
+  position: relative;
+  min-width: 320px;
+  margin: 0px;
+  padding: 0px;
+  background-color: #4CAFC2;
+  color: #FFFFFF;
+  font-family: 'robotoregular';
+  font-size: 1.6rem;
+  font-weight: 400;
+  cursor: default;
+}
+body div {
+  display: block;
+  box-sizing: border-box;
+  letter-spacing: 0px;
+}
+body a {
+  position: relative;
+  box-sizing: border-box;
+  line-height: inherit;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-align: inherit;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+body svg {
+  display: block;
+}
+body input {
+  font-family: 'robotoregular';
+  font-weight: 400;
+}
+.sse_szallasfoglalo {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 100px 0px 70px;
+}
+.sse_szallasfoglalo .ajax_content {
+  width: 100%;
+}
+.sse_szallasfoglalo .ajax_content.ajax_message {
+  position: absolute;
+  display: none;
+  height: 30px;
+  margin-top: -20px;
+  color: #FFBA18;
+  font-size: 2rem;
+  text-align: center;
+}
+.sse_szallasfoglalo .ajax_content.reservation_datas .users_activities {
+  width: 100%;
+  height: auto;
+  padding: 0px 20px;
+  margin-bottom: 15px;
+}
+.sse_szallasfoglalo .ajax_content.reservation_datas .users_activities .users_activity_row {
+  max-width: 868px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-bottom: 1px rgba(255, 255, 255, 0.4) solid;
+  margin-bottom: 2px;
+}
+.sse_szallasfoglalo .ajax_content.reservation_datas .users_activities .users_activity_row:last-child {
+  border-bottom: none;
+  margin-bottom: 0px;
+}
+.sse_szallasfoglalo .ajax_content.reservation_datas .users_activities .users_activity_row.user_activity_date {
+  font-family: 'robotobold';
+  height: 50px;
+  line-height: 40px;
+  padding-top: 10px;
+  font-size: 2.6rem;
+  text-align: center;
+}
+.sse_szallasfoglalo .ajax_content.reservation_datas .users_activities .users_activity_row .user_name_item {
+  display: inline-block;
+  vertical-align: top;
+  height: 40px;
+  line-height: 40px;
+  font-size: 2rem;
+  text-align: left;
+}
+.sse_szallasfoglalo .ajax_content.reservation_datas .users_activities .users_activity_row .activity_chkbox {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1.8rem;
+  padding-left: 50px;
+  float: right;
+  pointer-events: none;
+}
+.sse_szallasfoglalo .ajax_content.reservation_datas .users_activities .users_activity_row .activity_chkbox input {
+  display: inline-block;
+  vertical-align: top;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin: 5px 0px;
+  pointer-events: none;
+}
+.sse_szallasfoglalo .ajax_content.reservation_datas .users_activities .users_activity_row .activity_chkbox .input_label {
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+  margin: 5px 0px;
+  pointer-events: none;
+}
+.sse_szallasfoglalo .headline_block {
+  position: fixed;
+  font-family: 'robotobold';
+  width: 100%;
+  height: 100px;
+  margin: -100px 0px 0px;
+  padding: 0px 20px;
+  background-color: #008DA8;
+  opacity: 0.9;
+}
+.sse_szallasfoglalo .headline_block .headline_title {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100px;
+  line-height: 100px;
+  padding: 0px 20px;
+  font-size: 4rem;
+  overflow: hidden;
+}
+.sse_szallasfoglalo .headline_block .headline_title span {
+  display: inline-block;
+  vertical-align: top;
+}
+.sse_szallasfoglalo .headline_block .headline_title img {
+  display: inline-block;
+  vertical-align: top;
+  max-height: 190px;
+  width: auto;
+}
+.sse_szallasfoglalo .headline_block .headline_user {
+  display: inline-block;
+  vertical-align: middle;
+  height: 60px;
+  line-height: 57px;
+  margin: 20px;
+  font-size: 3rem;
+  border: 2px #FFFFFF solid;
+  border-radius: 20%;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px #FFFFFF inset;
+  -webkit-transition: box-shadow 0.2s ease-out;
+  transition: box-shadow 0.2s ease-out;
+}
+.sse_szallasfoglalo .headline_block .headline_user a {
+  display: block;
+  height: 100%;
+  padding: 0px 20px;
+}
+.sse_szallasfoglalo .headline_block .headline_user:hover {
+  box-shadow: 0px 0px 4px #FFFFFF inset, 0px 0px 10px #FFFFFF inset;
+}
+.sse_szallasfoglalo .headline_block .headline_item {
+  display: inline-block;
+  vertical-align: middle;
+  float: right;
+  height: 100px;
+  line-height: 100px;
+  padding: 0px 10px;
+  font-size: 3rem;
+}
+.sse_szallasfoglalo .headline_block .headline_item a {
+  padding: 0px 10px;
+  color: #FFFFFF;
+}
+.sse_szallasfoglalo .headline_block .headline_item a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+.sse_szallasfoglalo .headline_block .headline_item.underlined {
+  text-decoration: underline;
+}
+.sse_szallasfoglalo .block_title {
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  /*margin-top: 20px;*/
+  text-align: center;
+  font-family: 'robotobold';
+  font-size: 4rem;
+}
+.sse_szallasfoglalo .main_content_block {
+  width: 100%;
+  padding: 60px 20px;
+}
+.sse_szallasfoglalo .main_content_block .logo_item {
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(33% - 14px);
+  height: auto;
+  text-align: center;
+}
+.sse_szallasfoglalo .main_content_block .logo_item img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  filter: brightness(22);
+  -webkit-transition: filter 0.3s ease-out;
+  transition: filter 0.3s ease-out;
+}
+.sse_szallasfoglalo .main_content_block .logo_item a:hover > img {
+  filter: brightness(30);
+}
+.sse_szallasfoglalo .reservation_block .block_content {
+  text-align: center;
+}
+.sse_szallasfoglalo .reservation_block .block_content .month_item {
+  font-family: 'robotobold';
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+  height: auto;
+  margin: 0px 20px 20px;
+}
+.sse_szallasfoglalo .reservation_block .block_content .month_item .month_title {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-family: 'robotobold';
+  font-size: 2.2rem;
+}
+.sse_szallasfoglalo .reservation_block .block_content .month_item .row {
+  width: 100%;
+  height: auto;
+}
+.sse_szallasfoglalo .reservation_block .block_content .month_item .row:not(:first-child) {
+  margin-top: -1px;
+}
+.sse_szallasfoglalo .reservation_block .block_content .month_item .row.week_row {
+  background-color: #008DA8;
+}
+.sse_szallasfoglalo .reservation_block .block_content .month_item .row.days_row {
+  text-align: left;
+}
+.sse_szallasfoglalo .reservation_block .block_content .month_item .row .row_item {
+  display: inline-block;
+  vertical-align: top;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+.sse_szallasfoglalo .reservation_block .block_content .month_item .row .row_item.day_item.before_item:not(.blank_item) {
+  opacity: 0.5;
+  background-color: transparent;
+  pointer-events: none;
+}
+.sse_szallasfoglalo .reservation_block .block_content .month_item .row .row_item.day_item:not(.blank_item) {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+.sse_szallasfoglalo .reservation_block .block_content .month_item .row .row_item.day_item:not(.blank_item) > div {
+  width: 100%;
+}
+.sse_szallasfoglalo .reservation_block .block_content .month_item .row .row_item.day_item:not(.blank_item) > div.upper_line {
+  line-height: 33px;
+}
+.sse_szallasfoglalo .reservation_block .block_content .month_item .row .row_item.day_item:not(.blank_item) > div.bottom_line {
+  line-height: 25px;
+  font-family: 'roboto';
+  font-size: 1.6rem;
+  background-color: rgba(255, 186, 24, 0.6);
+  color: #FFFFFF;
+}
+.sse_szallasfoglalo .reservation_block .block_content .month_item .row .row_item.day_item:not(.blank_item) > .hover_shadow_frame {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+.sse_szallasfoglalo .reservation_block .block_content .month_item .row .row_item.day_item:not(.blank_item).selected div.hover_shadow_frame,
+.sse_szallasfoglalo .reservation_block .block_content .month_item .row .row_item.day_item:not(.blank_item):hover div.hover_shadow_frame,
+.sse_szallasfoglalo .reservation_block .block_content .month_item .row .row_item.day_item:not(.blank_item).clicked:hover div.hover_shadow_frame {
+  box-shadow: 0px 0px 4px #FFFFFF inset, 0px 0px 10px #FFFFFF inset;
+}
+.sse_szallasfoglalo .reservation_block .block_content .month_item .row .row_item.day_item:not(.blank_item):nth-child(6),
+.sse_szallasfoglalo .reservation_block .block_content .month_item .row .row_item.day_item:not(.blank_item):nth-child(7) {
+  color: yellow;
+}
+.sse_szallasfoglalo .reservation_block .block_content .month_item .row .row_item.day_item:not(.blank_item):nth-child(6).clicked,
+.sse_szallasfoglalo .reservation_block .block_content .month_item .row .row_item.day_item:not(.blank_item):nth-child(7).clicked {
+  color: #FFFFFF;
+}
+.sse_szallasfoglalo .reservation_block .block_content .month_item .row .row_item.day_item:not(.blank_item).disabled {
+  background-color: rgba(255, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+}
+.sse_szallasfoglalo .reservation_block .block_content .month_item .row .row_item.day_item:not(.blank_item).clicked {
+  background-color: #FFBA18;
+  box-shadow: 0px 0px 4px #FFFFFF inset;
+}
+.sse_szallasfoglalo .reservation_block .block_content .month_item .row .row_item.day_item:not(.blank_item).clicked > div.bottom_line {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.sse_szallasfoglalo .reservation_block .block_content .month_item .row .row_item:not(.blank_item) {
+  border: 1px #FFFFFF solid;
+}
+.sse_szallasfoglalo .reservation_block .block_content .month_item .row .row_item:not(:first-child) {
+  margin-left: -1px;
+}
+.sse_szallasfoglalo .reservation_block .days_activities {
+  /*margin-top: 20px;*/
+  text-align: center;
+}
+.sse_szallasfoglalo .reservation_block .days_activities .day_activity_item {
+  display: inline-block;
+  vertical-align: top;
+  width: 150px;
+  height: auto;
+  margin: 10px;
+  padding: 5px 0px;
+  background-color: #FFFFFF;
+  color: #008DA8;
+  border: 2px #008DA8 solid;
+  border-radius: 6px;
+}
+.sse_szallasfoglalo .reservation_block .days_activities .day_activity_item .day_date {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  padding: 0px 10px;
+  font-family: 'robotobold';
+  font-size: 2.2rem;
+  text-align: left;
+}
+.sse_szallasfoglalo .reservation_block .days_activities .day_activity_item .day_activities {
+  width: 100%;
+  font-size: 1.8rem;
+  margin: 5px 0px;
+}
+.sse_szallasfoglalo .reservation_block .days_activities .day_activity_item .day_activities .activity_chkbox {
+  padding: 0px 10px;
+  text-align: left;
+}
+.sse_szallasfoglalo .reservation_block .days_activities .day_activity_item .day_activities .activity_chkbox input {
+  display: inline-block;
+  vertical-align: top;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0px 0px 5px 0px;
+  cursor: pointer;
+}
+.sse_szallasfoglalo .reservation_block .days_activities .day_activity_item .day_activities .activity_chkbox label {
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+}
+.sse_szallasfoglalo .reservation_block .days_activities .submit_btn {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 5px;
+}
+.sse_szallasfoglalo .reservation_block .days_activities .submit_btn input[type=submit] {
+  display: block;
+  width: 200px;
+  height: 40px;
+  margin: auto;
+  background-color: #FFFFFF;
+  border: 1px #008DA8 solid;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #008DA8;
+  font-family: 'robotobold';
+  font-size: 1.6rem;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+.sse_szallasfoglalo .reservation_block .days_activities .submit_btn input[type=submit]:hover {
+  box-shadow: 0px 0px 4px #008DA8 inset, 0px 0px 10px #008DA8 inset;
+}
+.sse_szallasfoglalo .reservation_block .days_activities .submit_btn:not(.active) input[type=submit] {
+  filter: brightness(0.9);
+  color: lightgray;
+  border-color: lightgray;
+  pointer-events: none;
+}
+.sse_szallasfoglalo .reservation_block .days_activities .submit_btn input[type=submit] {
+  border-width: 2px;
+}
+.sse_szallasfoglalo .registration_block,
+.sse_szallasfoglalo .login_block {
+  max-width: 868px;
+  width: 100%;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0px 20px;
+}
+.sse_szallasfoglalo .registration_block.save_block,
+.sse_szallasfoglalo .login_block.save_block {
+  padding-bottom: 10px;
+}
+.sse_szallasfoglalo .registration_block .form_item,
+.sse_szallasfoglalo .login_block .form_item {
+  width: 100%;
+  min-height: 40px;
+  margin-bottom: 5px;
+}
+.sse_szallasfoglalo .registration_block .form_item .form_item_title,
+.sse_szallasfoglalo .login_block .form_item .form_item_title {
+  display: inline-block;
+  vertical-align: top;
+  width: 15%;
+  height: 30px;
+  line-height: 30px;
+}
+.sse_szallasfoglalo .registration_block .form_item .form_item_input,
+.sse_szallasfoglalo .login_block .form_item .form_item_input {
+  display: inline-block;
+  vertical-align: middle;
+  width: 40%;
+  height: 30px;
+  line-height: 30px;
+}
+.sse_szallasfoglalo .registration_block .form_item .form_item_input input[type=text],
+.sse_szallasfoglalo .login_block .form_item .form_item_input input[type=text],
+.sse_szallasfoglalo .registration_block .form_item .form_item_input input[type=email],
+.sse_szallasfoglalo .login_block .form_item .form_item_input input[type=email],
+.sse_szallasfoglalo .registration_block .form_item .form_item_input input[type=password],
+.sse_szallasfoglalo .login_block .form_item .form_item_input input[type=password] {
+  display: block;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  margin: 0px;
+  padding: 0px 15px;
+  color: #008DA8;
+  border: 1px #008DA8 solid;
+  border-radius: 6px;
+  outline: none;
+}
+.sse_szallasfoglalo .registration_block .form_item .form_item_input input[type=text]::placeholder,
+.sse_szallasfoglalo .login_block .form_item .form_item_input input[type=text]::placeholder,
+.sse_szallasfoglalo .registration_block .form_item .form_item_input input[type=email]::placeholder,
+.sse_szallasfoglalo .login_block .form_item .form_item_input input[type=email]::placeholder,
+.sse_szallasfoglalo .registration_block .form_item .form_item_input input[type=password]::placeholder,
+.sse_szallasfoglalo .login_block .form_item .form_item_input input[type=password]::placeholder {
+  color: #008DA8;
+}
+.sse_szallasfoglalo .registration_block .form_item .form_item_input.error_item > input,
+.sse_szallasfoglalo .login_block .form_item .form_item_input.error_item > input {
+  border: 2px red solid;
+}
+.sse_szallasfoglalo .registration_block .form_item .form_item_input.error_item + .form_item_explanation,
+.sse_szallasfoglalo .login_block .form_item .form_item_input.error_item + .form_item_explanation {
+  color: red;
+}
+.sse_szallasfoglalo .registration_block .form_item .form_item_explanation,
+.sse_szallasfoglalo .login_block .form_item .form_item_explanation {
+  display: inline-block;
+  vertical-align: middle;
+  width: 45%;
+  min-height: 15px;
+  line-height: 15px;
+  padding: 0px 0px 0px 20px;
+  font-size: 1.5rem;
+}
+.sse_szallasfoglalo .registration_block .required_notice,
+.sse_szallasfoglalo .login_block .required_notice,
+.sse_szallasfoglalo .registration_block .login_notice,
+.sse_szallasfoglalo .login_block .login_notice {
+  display: inline-block;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+}
+.sse_szallasfoglalo .registration_block .login_notice,
+.sse_szallasfoglalo .login_block .login_notice {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.sse_szallasfoglalo .registration_block .login_notice a,
+.sse_szallasfoglalo .login_block .login_notice a {
+  text-decoration: underline;
+}
+.sse_szallasfoglalo .registration_block .login_notice a:hover,
+.sse_szallasfoglalo .login_block .login_notice a:hover {
+  color: #008DA8;
+}
+.sse_szallasfoglalo .registration_block .submit_btn,
+.sse_szallasfoglalo .login_block .submit_btn {
+  width: 100%;
+  height: 40px;
+}
+.sse_szallasfoglalo .registration_block .submit_btn input[type=submit],
+.sse_szallasfoglalo .login_block .submit_btn input[type=submit] {
+  display: block;
+  width: 200px;
+  height: 40px;
+  margin: auto;
+  background-color: #FFFFFF;
+  border: 1px #008DA8 solid;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #008DA8;
+  font-family: 'robotobold';
+  font-size: 1.6rem;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+.sse_szallasfoglalo .registration_block .submit_btn input[type=submit]:hover,
+.sse_szallasfoglalo .login_block .submit_btn input[type=submit]:hover {
+  box-shadow: 0px 0px 4px #008DA8 inset, 0px 0px 10px #008DA8 inset;
+}
+.sse_szallasfoglalo .login_block .form_item {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.sse_szallasfoglalo .login_block .form_item .form_item_input {
+  display: block;
+  max-width: 300px;
+  width: 100%;
+  margin: auto;
+}
+.sse_szallasfoglalo .login_block .form_item .form_item_explanation {
+  display: block;
+  max-width: 300px;
+  width: 100%;
+  margin: auto;
+  padding-left: 0px;
+  color: red;
+}
+.sse_szallasfoglalo .login_block .error_notice {
+  display: block;
+  max-width: 300px;
+  width: 100%;
+  min-height: 30px;
+  line-height: 15px;
+  margin: -25px auto 10px;
+  padding-left: 0px;
+  color: red;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.sse_szallasfoglalo .footer_line {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 70px;
+  line-height: 25px;
+  padding: 10px 20px;
+  background-color: #008DA8;
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 0.9;
+}
+.sse_szallasfoglalo .footer_line .f_left,
+.sse_szallasfoglalo .footer_line .f_right {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 50%;
+}
+.sse_szallasfoglalo .footer_line .f_right {
+  position: relative;
+  text-align: right;
+  padding-right: 20px;
+}
+.sse_szallasfoglalo .footer_line .f_right .mouse_icon {
+  position: absolute;
+  display: inline-block;
+  vertical-align: middle;
+  right: 0px;
+  margin-top: 3px;
+  width: 11px;
+  height: 17px;
+  border-radius: 6px;
+  border: solid 1px #FFFFFF;
+  color: #008DA8;
+  background-color: #4CAFC2;
+}
+.sse_szallasfoglalo .footer_line .f_right .mouse_icon:before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: -1px;
+  width: 11px;
+  height: 1px;
+  color: transparent;
+  background-color: #FFFFFF;
+}
+.sse_szallasfoglalo .footer_line .f_right .mouse_icon:after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: -1px;
+  width: 1px;
+  height: 7px;
+  color: transparent;
+  background-color: #FFFFFF;
+}
+.sse_szallasfoglalo .footer_line a {
+  display: inline-block;
+  vertical-align: middle;
+}
+.sse_szallasfoglalo .footer_line a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
